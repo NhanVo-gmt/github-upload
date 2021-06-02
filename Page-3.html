@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Main-page.css">
+</head>
+<div id="header">
+	<h1>Responsive Web Design</h1>
+	<nav id="nav-bar">
+		<a class="nav-link" href="Main-page.html" target="_blank">Home</a>
+		<a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a>
+		<a class="nav-link" href="Page-2.html" target="_blank">Responsive Data Tables</a>
+		<a class="nav-link active" href="Page-3.html" target="_blank">Responsive Navigation Menus</a>
+		<script>
+		var header = document.getElementById("nav-bar");
+		var btns = header.getElementsByClassName("nav-link");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("active");
+		  current[0].className = current[0].className.replace(" active", "");
+		  this.className += " active";
+		  });
+		}
+		</script>
+	</nav>
+</div>
+<div id="body">
+	<div class="body-ele">
+		<h2>Convert a Menu to a Dropdown for Small Screens</h2>
+		<p>When you’re on a small screen (iPhone shown here) and click the dropdown,
+		you get an interface to select an option where each option is nice and big
+		and easy to choose.</p>
+		<img
+		src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2011/07/fivesimplesteps.jpg?w=570&ssl=1"
+		alt ="Converting menus">
+		<p>That sure makes it easier to pick a place to go than a tiny link. It’s two taps instead of one, but that’s arguable since you’d probably have to zoom in to tap the right link otherwise.</p>
+		<img
+		src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2011/07/iphoneselect.png?w=400&ssl=1"
+		alt="Convering menus">
+	</div>
+	<div class="body-ele">
+		<h3>Video</h3>
+		<p>Quick video example in case you are reading this from somewhere you can’t
+		adjust the browser size and play with it to see what the heck we’re talking
+		about here.</p>
+		<p id="video-title">Video will convert itself into different styles based on different resolutions</p>
+		<iframe src="https://www.youtube.com/embed/lq47ihlTj6I" width="840" height="600"></iframe>
+	</div>
+</div>
+<div id="footer">
+	<h2>Further Resources For Responsive Web Design<h2>
+	<ul>
+		<li><a class="nav-link" href="Home.html" target="_blank">Home</a></li>
+		<li><a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a></li>
+		<li><a class="nav-link" href="Page-2.html" target="_blank">Responsive Data Tables</a></li>
+</div>
+</html>
+

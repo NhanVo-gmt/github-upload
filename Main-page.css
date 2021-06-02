@@ -1,0 +1,102 @@
+@import url("<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">");
+
+:root{
+	--color-light-red:rgba(255, 54, 54, 1);
+	--color-heavy-red:rgba(163, 0, 0, 1);
+	--color-dark-blue:rgba(0, 54, 135, 1);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Pacifico', cursive;
+	background-image: linear-gradient(to right,#B2FEFA , #0ED2F7 );
+
+}
+
+#header{
+	background-color:var(--color-light-red);
+	color: white;
+	margin:-5px -10px 0 -10px;
+}
+
+h1 {
+	display: inline-block;
+	font-size: 2vw;
+	margin-left: 3.5%;
+}
+
+#nav-bar{
+	display: float;
+	float: right;
+	padding-top: 0.1vw;
+	text-decoration: none;
+}
+
+#header .nav-link{
+	color:white;
+	text-decoration: none;
+	font-size: 1.3vw;
+	font-weight: 40px;
+	margin-right: 1vw;
+	border: 0.5vw solid transparent;
+	border-radius: 0.25vw;
+}
+
+#header .nav-link:hover{
+	background-color: var(--color-heavy-red);
+}
+
+.active{
+	background-color: var(--color-heavy-red);
+}
+
+#body, #footer{
+	font-size: 1.3vw;
+	font-weight: 20px;
+	margin: 0 15% 0 15%;
+	padding-bottom: 5%;
+}
+
+.body-ele{
+	margin-bottom: 10%;
+}
+
+.img-slideshow img{
+	width: 100%;
+}
+
+.img-slideshow{
+	display: none;
+}
+
+
+h3 {
+	font-size:2vw;
+}
+
+.showcase{
+	display: block;
+	margin-bottom:8%;
+	max-width: 100%;
+	height: auto;
+	margin-left:10%;
+}
+
+.sub-image{
+	font-style: italic;
+	text-align: center;
+}
+
+#footer .nav-link{
+	color:black;
+	font-size:1.5vw;
+	text-decoration: none;
+}
+
+#footer .nav-link:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}

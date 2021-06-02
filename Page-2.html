@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Main-page.css">
+</head>
+<div id="header">
+	<h1>Responsive Web Design</h1>
+	<nav id="nav-bar">
+		<a class="nav-link" href="Main-page.html" target="_blank">Home</a>
+		<a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a>
+		<a class="nav-link active" href="Page-2.html" target="_blank">Responsive Data Tables</a>
+		<a class="nav-link" href="Page-3.html" target="_blank">Responsive Navigation Menus</a>
+		<script>
+		var header = document.getElementById("nav-bar");
+		var btns = header.getElementsByClassName("nav-link");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("active");
+		  current[0].className = current[0].className.replace(" active", "");
+		  this.className += " active";
+		  });
+		}
+		</script>
+	</nav>
+</div>
+<div id="body">
+	<div class="body-ele">
+		<h2>Responsive Data Table Roundup</h2>
+		<p>The idea of the original was to abandon the grid layout of the table and
+		make each cell its own line. Each of those lines is labeled with a pseudo
+		element. This creates a much taller table, requiring more vertical
+		scrolling, but does not require horizontal scrolling. It’s easier to browse
+		the data without losing the context of what’s what. The downside is that you
+		might lose the context of data comparison since you no longer see cells of
+		data right next to other cells of that type.</p>
+		<img
+		src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2012/01/orig.jpg?resize=1000%2C499&ssl=1"
+		alt="table on different resolutions">
+	</div>
+	<div class="body-ele">
+		<h3>Change the table style</h3>
+		<p>In this demo, it’s pie chart that is much narrower than the complete data
+		table and thus more suitable for small screens.</p>
+		<img
+		src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2012/01/responsivetabletochart.jpeg?w=570&ssl=1"
+		alt="table changes into pie chart">
+	</div>
+	<div class="body-ele">
+		<h3>Hide unecessary information</h3>
+		<p>There is a problem that large data tables can stretch out the width of a parent
+		container beyond what a small screen is capable of displaying. So to prevent
+		this, a media query is used to hide the table on small screens, replaced
+		with a small mock-table and a link to view the full table.</p>
+		<img
+		src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2012/01/taptoviewtable.jpeg?w=570&ssl=1"
+		alt="Different table styles on devices">
+		<p> Using small screens to focus information to the most important things is
+		great, it just shouldn’t lock away information with no recourse. Maggie
+		Costello Wachs of Filament Group also had the idea of hiding non-essential
+		columns on smaller screens, but also providing a dropdown menu where you can
+		re-enable them if you wish (which you can get to see with horizontal 
+		scrolling).</p>
+		<img
+		src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2012/01/filament.jpg?w=700&ssl=1"
+		alt="Columns to choose diplayed information">
+	</div>
+</div>
+<div id="footer">
+	<h2>Further Resources For Responsive Web Design<h2>
+	<ul>
+		<li><a class="nav-link" href="Main-page.html" target="_blank">Home</a></li>
+		<li><a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a></li>
+		<li><a class="nav-link" href="Page-3.html" target="_blank">Responsive Navigation Menus</a></li>
+</div>
+</html>

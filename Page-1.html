@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Page-1.css">
+</head>
+<div id="header">
+	<h1>Responsive Web Design</h1>
+	<nav id="nav-bar">
+		<a class="nav-link" href="Main-page.html" target="_blank">Home</a>
+		<a class="nav-link active" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a>
+		<a class="nav-link" href="Page-2.html" target="_blank">Responsive Data Tables</a>
+		<a class="nav-link" href="Page-3.html" target="_blank">Responsive Navigation Menus</a>
+		<script>
+		var header = document.getElementById("nav-bar");
+		var btns = header.getElementsByClassName("nav-link");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("active");
+		  current[0].className = current[0].className.replace(" active", "");
+		  this.className += " active";
+		  });
+		}
+		</script>
+	</nav>
+</div>
+<div id="body">
+	<div class="body-ele">
+		<h2>CSS transitions and Media Queries</h2>
+		<p>Media queries are a popular technique for delivering a tailored style
+		sheet to different devices. To demonstrate a simple example, we can change
+		the background color for different devices</p>
+		<img src="https://www.w3schools.com/css/mqcap.JPG" alt="Different devices">
+		<p>We can add a breakpoint where certain parts of the design will behave
+		differently on each side of the breakpoint.</p>
+	</div>
+	<div class="body-ele">
+        <h2>Slightly More Complex Layout Example</h2>
+		<p>If you apply a transition on an element for a particular supported
+		property, and that property ever changes, it will use that transition. If a
+		class name on that element changes and the new class changes that property,
+		it will transition (assuming what that class does isn’t remove the
+		transition). If JavaScript literally changes the that style property, it
+		will transition.</p>
+		<p>Likewise, if a new media query takes affect, and that media query has
+		something in it that changes that property on that element (when a new media
+		query starts affecting the page), it will transition.</p>
+		<img
+		src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2013/10/mq-animate.gif"
+		alt="image changes as well as screen resolution">
+	</div>
+</div>
+<div id="footer">
+	<h2>Further Resources For Responsive Web Design<h2>
+	<ul>
+		<li><a class="nav-link" href="Main-page.html">Home</a></li>
+		<li><a class="nav-link" href="Page-2.html">Responsive Data Tables</a></li>
+		<li><a class="nav-link" href="Page-3.html">Responsive Navigation Menus</a></li>
+</div>
+</html>

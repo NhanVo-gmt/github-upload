@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Main-page.css">
+</head>
+<div id="header">
+	<h1>Responsive Web Design</h1>
+	<nav id="nav-bar">
+		<a class="nav-link active" href="Main-page.html" target="_blank">Home</a>
+		<a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a>
+		<a class="nav-link" href="Page-2.html" target="_blank">Responsive Data Tables</a>
+		<a class="nav-link" href="Page-3.html" target="_blank">Responsive Navigation Menus</a>
+		<script>
+		var header = document.getElementById("nav-bar");
+		var btns = header.getElementsByClassName("nav-link");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("active");
+		  current[0].className = current[0].className.replace(" active", "");
+		  this.className += " active";
+		  });
+		}
+		</script>
+	</nav>
+</div>
+<div id="body">
+	<div class="body-ele">
+		<h2>Home</h2>
+		<h3>Quick summary</h3>
+		<p><strong>Almost every new client these days wants a mobile version of their
+		website.</strong> It’s practically essential after all: one design for the BlackBerry,
+		another for the iPhone, the iPad, netbook, Kindle — and all screen
+		resolutions must be compatible, too. In the next five years, we’ll likely
+		need to design for a number of additional inventions. When will the madness
+		stop? It won’t, of course.</p>
+		<img
+		src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/58bf6358-449a-488b-b42b-8258d98bd3d7/croppinglogo.jpg"
+		srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/58bf6358-449a-488b-b42b-8258d98bd3d7/croppinglogo.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/58bf6358-449a-488b-b42b-8258d98bd3d7/croppinglogo.jpg
+			2000w"
+		alt="Text fixe on different devices">
+		<p>In the field of Web design and development, we’re quickly getting to the
+		point of being unable to keep up with the endless new resolutions and
+		devices. For many websites, creating a website version for each resolution
+		and new device would be impossible, or at least impractical. Should we just
+		suffer the consequences of losing visitors from one device, for the benefit
+		of gaining visitors from another? Or is there another option?</p>
+	</div>
+	<div class="body-ele">
+		<h3>What is Responsive Web Design</h3>
+		<p>Responsive Web design is the approach that suggests that design and
+		development should respond to the user’s behavior and environment based on
+		screen size, platform and orientation.</p>
+		<p>The practice consists of a mix of flexible grids and layouts, images and
+		an intelligent use of CSS media queries. As the user switches from their
+		laptop to iPad, the website should automatically switch to accommodate for
+		resolution, image size and scripting abilities. One may also have to
+		consider the settings on their devices; if they have a VPN for iOS on their
+		iPad, for example, the website should not block the user’s access to the
+		page. In other words, the website should have the technology to
+		automatically respond to the user’s preferences. This would eliminate the
+		need for a different design and development phase for each new gadget on the
+		market.</p>
+		<p>Responsive Web design is not only about adjustable screen resolutions and
+		automatically resizable images, but rather about a whole new way of thinking
+		about design. Let’s talk about all of these features, plus additional ideas
+		in the making.</p>
+	</div>
+	<div class="body-ele">
+		<h3>Adjusting Screen Resolution</h3>
+		<p>we can make things more flexible. Images can be automatically adjusted,
+		and we have workarounds so that layouts never break (although they may
+		become squished and illegible in the process). While it’s not a complete
+		fix, the solution gives us far more options. It’s perfect for devices that
+		switch from portrait orientation to landscape in an instant or for when
+		users switch from a large computer screen to an iPad.</p>
+		<div id="slideshow">
+			<img class="img-slideshow"
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68e11d7a-2794-4550-8890-ca64f92a2b52/moreflexible.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68e11d7a-2794-4550-8890-ca64f92a2b52/moreflexible.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68e11d7a-2794-4550-8890-ca64f92a2b52/moreflexible.jpg
+			2000w"
+			alt="How the image would appear in different resolutions">
+			<img class="img-slideshow"
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/c0d0c9eb-32cf-49d3-abc4-a4d3de4da18d/filamentgroup.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/c0d0c9eb-32cf-49d3-abc4-a4d3de4da18d/filamentgroup.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/c0d0c9eb-32cf-49d3-abc4-a4d3de4da18d/filamentgroup.jpg
+			2000w"
+			alt="How the image would appear in different resolutions">
+			<img class="img-slideshow"
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/a4465aaf-bd08-4c46-958c-ff096fda2f2b/movingcontent.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/a4465aaf-bd08-4c46-958c-ff096fda2f2b/movingcontent.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/a4465aaf-bd08-4c46-958c-ff096fda2f2b/movingcontent.jpg
+			2000w"
+			alt="How the image would appear in different resolutions">
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("img-slideshow");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+		</script>
+	</div>
+	<div class="body-ele">
+		<h3>Stop Iphone Simulator Image Resizing</h3>
+		<p>One nice thing about the iPhone and iPod Touch is that Web designs
+		automatically rescale to fit the tiny screen. A full-sized design, unless
+		specified otherwise, would just shrink proportionally for the tiny browser,
+		with no need for scrolling or a mobile version. Then, the user could easily
+		zoom in and out as necessary.</p>
+		<p>There was, however, one issue this simulator created. When responsive Web
+		design took off, many noticed that images were still changing proportionally
+		with the page even if they were specifically made for (or could otherwise
+		fit) the tiny screen. This in turn scaled down text and other elements.</p>
+		<img
+		src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/28f492c3-bc7c-4091-8fcf-380a0d5f9da0/iphonescale.jpg"
+		srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/28f492c3-bc7c-4091-8fcf-380a0d5f9da0/iphonescale.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/28f492c3-bc7c-4091-8fcf-380a0d5f9da0/iphonescale.jpg
+			2000w"
+		alt="Image can change its resize">
+	</div>
+	<div class="body-ele">
+		<h3>Showing Or Hiding Content</h3>
+		<p>It is possible to shrink things proportionally and rearrange elements as
+		necessary to make everything fit (reasonably well) as a screen gets smaller.
+		It’s great that that’s possible, but making every piece of content from a
+		large screen available on a smaller screen or mobile device isn’t always the
+		best answer. We have best practices for mobile environments: simpler
+		navigation, more focused content, lists or rows instead of multiple
+		columns.</p>
+		<img
+		src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/22cb73f6-612b-4c61-815f-8a5c118c5c23/diggmobile.jpg"
+		srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/22cb73f6-612b-4c61-815f-8a5c118c5c23/diggmobile.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/22cb73f6-612b-4c61-815f-8a5c118c5c23/diggmobile.jpg
+			2000w"
+		alt="Different contents on different devices">
+		<p>Responsive Web design shouldn’t be just about how to create a flexible
+		layout on a wide range of platforms and screen sizes. It should also be
+		about the user being able to pick and choose content. Fortunately, CSS has
+		been allowing us to show and hide content with ease for years!</p>
+		<img
+		src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/4b58ddd9-5066-4c35-a7b7-baa9386b7c2a/showinghidingcontent.jpg"
+		srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/4b58ddd9-5066-4c35-a7b7-baa9386b7c2a/showinghidingcontent.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/4b58ddd9-5066-4c35-a7b7-baa9386b7c2a/showinghidingcontent.jpg
+			2000w"
+		alt="Hiding content technique">
+	</div>
+	<div class="body-ele">
+		<h3>A Showcase Of Responsive Web Design</h3> 
+		<p>Below we have a few examples of responsive Web design in practice today.
+		For many of these websites, there is more variation in structure and style
+		than is shown in the pairs of screenshots provided. Many have several
+		solutions for a variety of browsers, and some even adjust elements
+		dynamically in size without the need for specific browser dimensions. Visit
+		each of these, and adjust your browser size or change devices to see them in
+		action.</p>
+		<div class="showcase">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/771ef7e9-86f4-4825-93c3-bbe3e07c9873/artequalswork1.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/771ef7e9-86f4-4825-93c3-bbe3e07c9873/artequalswork1.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/771ef7e9-86f4-4825-93c3-bbe3e07c9873/artequalswork1.jpg
+			2000w"
+			alt="artequalswork">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2252362c-b062-477f-b25e-4fc48845cd1c/artequalswork2.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2252362c-b062-477f-b25e-4fc48845cd1c/artequalswork2.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2252362c-b062-477f-b25e-4fc48845cd1c/artequalswork2.jpg
+			2000w"
+			alt="artequalswork">
+			<p class="sub-image">Art Equals Work is a simple yet great example of responsive Web design</p>
+		</div>
+		<div class="showcase">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/64a9c19c-d613-469f-a9f1-2853e2c2d4c6/thinkvitamin1.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/64a9c19c-d613-469f-a9f1-2853e2c2d4c6/thinkvitamin1.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/64a9c19c-d613-469f-a9f1-2853e2c2d4c6/thinkvitamin1.jpg
+			2000w"
+			alt="think vitamin">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/50069d23-1b22-45aa-8913-94faad9c4c53/thinkvitamin2.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/50069d23-1b22-45aa-8913-94faad9c4c53/thinkvitamin2.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/50069d23-1b22-45aa-8913-94faad9c4c53/thinkvitamin2.jpg
+			2000w"
+			alt="think vitamin">
+			<p class="sub-image">With Think Vitamin, we see a similar approach</p>
+		</div>
+		<div class="showcase">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/98670695-9f09-4875-b1ed-d43530d9a3e4/8faces1.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/98670695-9f09-4875-b1ed-d43530d9a3e4/8faces1.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/98670695-9f09-4875-b1ed-d43530d9a3e4/8faces1.jpg
+			2000w"
+			alt="think vitamin">
+			<img
+			src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/73aacb7f-2158-40b1-9d4a-da6f740e2e10/8faces2.jpg"
+			srcset="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/73aacb7f-2158-40b1-9d4a-da6f740e2e10/8faces2.jpg
+			1000w,
+			https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/73aacb7f-2158-40b1-9d4a-da6f740e2e10/8faces2.jpg
+			2000w"
+			alt="think vitamin">
+			<p class="sub-image">8 Faces’ website design is flexible, right down to a standard netbook or tablet</p>
+		</div>
+	</div>
+	<div class="body-ele">
+		<h3>Conclusion</h3>
+		<p>Responsive Web design and the techniques discussed above are not the
+		final answer to the ever-changing mobile world. Responsive Web design is a
+		mere concept that when implemented correctly can improve the user
+		experience, but not completely solve it for every user, device and platform.
+		We will need to constantly work with new devices, resolutions and
+		technologies to continually improve the user experience as technology
+		evolves in the coming years.</p>
+	</div>
+</div>
+<div id="footer">
+	<h2>Further Resources For Responsive Web Design<h2>
+	<ul>
+		<li><a class="nav-link" href="Page-1.html" target="_blank">CSS transitions and Media Queries</a></li>
+		<li><a class="nav-link" href="Page-2.html" target="_blank">Responsive Data Tables</a></li>
+		<li><a class="nav-link" href="Page-3.html" target="_blank">Responsive Navigation Menus</a></li>
+</div>
+</html>
